@@ -1,1 +1,4 @@
-sdgfagvreg
+created a index.js
+install express js==> yarn add express
+install nodemon==> yarn global add nodemon
+run the server==>yarn nodemon index.js

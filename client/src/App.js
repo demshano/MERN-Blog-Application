@@ -9,14 +9,15 @@ function App() {
     <main>
            
               <Routes>
-           <Route index element={
+                
+                  <Route index element={
 
-           <>
-           <Header /> 
-           <Home />
-           </>
+                  <>
+                  <Header /> 
+                  <Home />
+                  </>
 
-           } />
+                  } />
            
 
                   <Route path='/' element={<Home />} />

@@ -5,7 +5,12 @@ run the server==>yarn nodemon index.js
 we fetch the databasethen we install cors for clear the errors
 then we created mongoDB account and created a db
 then we install mongoose: yarn add mongoose
+install cors
+install jwt
+install cookie parser
 
+creaating craete page
+instal react quill(editor)
 
 mongodb created database 
 username: delabro99

@@ -5,12 +5,15 @@ const User = require('./models/User');
 const bcrypt = require('bcryptjs');
 const app =express();
 const jwt = require('jsonwebtoken');
+const cookieParser = require('cookie-parser');
 
 const salt = bcrypt.genSaltSync(10);
 const secret= 'dsgsrgthrtbh';
 
     app.use(cors({credentials:true,origin:'http://localhost:3000'}));
     app.use(express.json());
+    app.use(cookieParser());
+
      mongoose.connect('mongodb+srv://delabro99:sYdFZFTqsZwdsc9u@cluster0.t1lmi0o.mongodb.net/?retryWrites=true&w=majority');
 
     app.post('/register', async (req,res)=>{
@@ -44,7 +47,10 @@ const secret= 'dsgsrgthrtbh';
             //logged in
             jwt.sign({userName,id:userDoc._id}, secret ,{},(err,token)=>{
                     if(err) throw err;
-                    res.cookie('token', token).json('ok');
+                    res.cookie('token', token).json({
+                        id:userDoc._id,
+                        userName,
+                    });
                     //res.json(token);
             })
         }
@@ -56,10 +62,21 @@ const secret= 'dsgsrgthrtbh';
     });
 
     
-        
+    app.get('/profile', (req,res)=>{
+        const {token} =req.cookies;
+        jwt.verify(token,secret,{},(err,info)=>{
+                if(err) throw err;
+                res.json(info);
+        })
+        res.json(req.cookies);
+    });
+
+    app.post('/logout', (req,res)=>{
+        res.cookie('token', '').json('ok');
+    })
+
         
 
 
-    //const passOk=bcrypt.compareSync(password, userDoc.password);
-        //res.json(passOk);
+    
 app.listen(4000);

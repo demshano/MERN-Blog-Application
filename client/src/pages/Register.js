@@ -1,9 +1,13 @@
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Register = () => {
 
-    const [userName, setUserName]=useState('')
-    const [password, setPassword]=useState('')
+    const [userName, setUserName]=useState('');
+    const [password, setPassword]=useState('');
+
+    const navigate = useNavigate();
+
 
      async function register(ev)
     {
@@ -23,6 +27,8 @@ export const Register = () => {
         {
           alert('Registration is failed');
         }
+
+        {navigate('/login')}
       
       
     }
@@ -53,7 +59,10 @@ export const Register = () => {
         />
     </div>
 
+{/* <Link to={'/login'}> */}
+
     <button className='bg-red-800 w-[62px] rounded text-white relative mt-[30px]'>Register</button>
+{/* </Link> */}
 
 </form>
     </>

@@ -2,3 +2,14 @@ created a index.js
 install express js==> yarn add express
 install nodemon==> yarn global add nodemon
 run the server==>yarn nodemon index.js
+we fetch the databasethen we install cors for clear the errors
+then we created mongoDB account and created a db
+then we install mongoose: yarn add mongoose
+
+
+mongodb created database 
+username: delabro99
+password: blogmern sYdFZFTqsZwdsc9u
+
+mongodb+srv://delabro99:blogmern@blogmern.c8pmluy.mongodb.net/?retryWrites=true&w=majority
+mongodb+srv://<username>:blogmern@blogmern.c8pmluy.mongodb.net/?retryWrites=true&w=majority

@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { PostCard, Header } from './component';
-import { Home, Login, Register, CreatePost } from './pages';
+import { Home, Login, Register, CreatePost, PostPage, EditPost } from './pages';
 import { UserContextProvider } from './UserContext';
 import './App.css';
 
@@ -27,6 +27,8 @@ function App() {
                   <Route path='/login' element={<Login />} />
                   <Route path='/register' element={<Register />} />
                   <Route path='/create' element={<CreatePost />} />
+                  <Route path='/post/:id' element={<PostPage />} />
+                  <Route path='/edit/:id' element={<EditPost />}/>
                 
               </Routes>
 

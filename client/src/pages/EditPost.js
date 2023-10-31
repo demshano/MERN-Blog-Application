@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { Navigate} from 'react-router-dom';
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
 
 
 const modules = {
@@ -24,8 +23,8 @@ const modules = {
         'link', 'image'
     ];
 
+export const EditPost = () => {
 
-export const CreatePost = () => {
 
     const [title, setTitle] = useState('');
     const [summary, setSummary] = useState('');
@@ -33,36 +32,20 @@ export const CreatePost = () => {
     const [files, setFiles] = useState('');
     const [redirect, setRedirect] = useState(false);
 
-        async function createNewPost(ev)
-        {
-            const data= new FormData();
-            data.set('title', title);
-            data.set('summary',summary);
-            data.set('content',content);
-            data.set('file',files[0]);
-            ev.preventDefault();
 
-            console.log(files)
 
-            const response = await fetch('http://localhost:4000/post',{
-                method:'POST',
-                body: data,
-                credentials: 'include',
-            });
+    function updatePost()
+    {
 
-            if(response.ok)
-            {
-              setRedirect(true);
-            }
-        }
+    }
 
-        if(redirect)
-        {
-          return <Navigate to={'/'} />
-        }
+    if(redirect)
+    {
+      return <Navigate to={'/'} />
+    }
 
   return (
-    <form onSubmit={createNewPost}>
+    <form onSubmit={updatePost}>
 
         <input type="title" placeholder='Title' 
         valie={title} 
@@ -88,3 +71,4 @@ export const CreatePost = () => {
     </form>
   )
 }
+

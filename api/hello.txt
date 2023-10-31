@@ -12,6 +12,10 @@ install cookie parser
 creaating craete page
 instal react quill(editor)
 
+install multer to handle file uploads
+
+install date-fns  to costom the date and time
+
 mongodb created database 
 username: delabro99
 password: blogmern sYdFZFTqsZwdsc9u

@@ -41,6 +41,7 @@ export const Header = () => {
       strings: ['<i>curious.</i>'],
       typeSpeed: 100,
       backSpeed: 75,
+      showCursor: false,
       loop: true,
     });
 
@@ -57,20 +58,30 @@ export const Header = () => {
     <main className='p-[10px] w-full h-[300px] mx-auto bg-sky-300'>
         <header className='flex justify-between mb-[50px] mt-[20px]'>
 
-          <div>
+      <div>
 
 
-    <Link to="/" className='logo no-underline font-bold text-lg ml-44'>
-      <span className="text-5xl">Quantum</span>
-      <span className="text-white ml-2">Pulse</span>
-    </Link>
+            <Link to="/" className='logo no-underline font-bold text-lg ml-44'>
+              <span className="text-5xl">Quantum</span>
+              <span className="text-white ml-2">Pulse</span>
+            </Link>
 
-  <div className="ml-44 mt-20">
-    <span className="text-8xl font-extrabold italic">Stay</span>
-    <span ref={el} />
-  </div>
-
+          <div className="ml-44 mt-20 md:block sm:hidden">
+            <span className="text-8xl font-extrabold italic">Stay</span>
+            <span className="italic text-5xl font-medium" ref={el} />
           </div>
+
+      </div>
+
+      <div className="absolute ml-[650px] mt-[100px]">
+        <div className="font-medium tracking-wider">Discover stories, thinking, and expertise </div>
+        <div className="font-medium tracking-wider">from writers on any topic</div>
+        <div className="mt-4">
+          <Link to='/register'>
+          <button className="bg-black text-white px-4 py-2 rounded-md tracking-wider">Start Writing</button>
+          </Link>
+        </div>
+      </div>
 
     <nav className='flex gap-[15px]'>
 

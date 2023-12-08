@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { PostCard, Header } from './component';
+import { PostCard, Header, Footer } from './component';
 import { Home, Login, Register, CreatePost, PostPage, EditPost } from './pages';
 import { UserContextProvider } from './UserContext';
 import './App.css';
@@ -17,6 +17,7 @@ function App() {
                           <>
                             <Header /> 
                             <Home />
+                            <Footer />
                           </>
 
                     } 

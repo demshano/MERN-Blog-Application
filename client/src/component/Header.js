@@ -1,7 +1,9 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useState, useRef } from "react"
 // import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom"
 import { UserContext } from "../UserContext";
+import Typed from 'typed.js';
+
 export const Header = () => {
 
   //const navigate = useNavigate();
@@ -31,14 +33,44 @@ export const Header = () => {
 
   const user_name  = userInfo?.userName;
 
+  // Create reference to store the DOM element containing the animation
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['<i>curious.</i>'],
+      typeSpeed: 100,
+      backSpeed: 75,
+      loop: true,
+    });
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
 
 
   return (
 
-    <main className='p-[10px] max-w-[700px] mx-auto bg-red-300'>
+    <main className='p-[10px] w-full h-[300px] mx-auto bg-sky-300'>
         <header className='flex justify-between mb-[50px] mt-[20px]'>
 
-<Link to="/" className='logo no-underline font-bold text-lg'>MyBlog</Link>
+          <div>
+
+
+    <Link to="/" className='logo no-underline font-bold text-lg ml-44'>
+      <span className="text-5xl">Quantum</span>
+      <span className="text-white ml-2">Pulse</span>
+    </Link>
+
+  <div className="ml-44 mt-20">
+    <span className="text-8xl font-extrabold italic">Stay</span>
+    <span ref={el} />
+  </div>
+
+          </div>
 
     <nav className='flex gap-[15px]'>
 
@@ -52,18 +84,19 @@ export const Header = () => {
         
       )} 
       {!user_name && (
-        <>
-        <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link>
-        </>
+        <div className="mr-44">
+        <Link className="font-medium mr-8" to="/login">Sign in</Link>
+        <Link className="bg-black text-white p-2 rounded-md" to="/register">Get Started</Link>
+        </div>
       )}
 
         
     </nav>
 
-</header>
+        </header>
     </main>
 
   )
 }
+
 

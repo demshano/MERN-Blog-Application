@@ -38,7 +38,7 @@ export const Register = () => {
 
     <h1 className='text-5xl font-bold text-center mt-[20px]'>Register</h1>
     
-    <form onSubmit={register} action="" className='bg-slate-400 max-w-[400px] mx-auto mt-[200px] p-12'>
+    <form onSubmit={register} action="" className='bg-sky-400 max-w-[400px] mx-auto mt-[200px] p-12 rounded-md'>
 
     <div className=''>
         <label htmlFor="username">username</label>
@@ -59,10 +59,10 @@ export const Register = () => {
         />
     </div>
 
-{/* <Link to={'/login'}> */}
-
     <button className='bg-red-800 w-[62px] rounded text-white relative mt-[30px]'>Register</button>
-{/* </Link> */}
+<Link to={'/login'}>
+<button className='bg-red-800 w-[62px] rounded text-white relative mt-[30px]'>Login</button>
+</Link>
 
 </form>
     </>

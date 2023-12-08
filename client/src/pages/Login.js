@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import { UserContext } from '../UserContext';
 
 export const Login = () => {
@@ -58,6 +58,9 @@ export const Login = () => {
           </div>
 
           <button className='bg-red-800 w-[62px] rounded text-white relative mt-[30px]'>Login</button>
+          <Link to='/register'>
+          <button className='bg-red-800 w-[62px] rounded text-white relative mt-[30px]'>Register</button>
+          </Link>
 
       </form>
     </>

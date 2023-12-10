@@ -38,7 +38,7 @@ export const Header = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['<i>curious.</i>'],
+      strings: ['<i>curious.</i>', '<i>consistency.</i>', '<i>motivation.</i>'],
       typeSpeed: 100,
       backSpeed: 75,
       showCursor: false,
@@ -101,11 +101,13 @@ export const Header = () => {
 
       {user_name && (
         <>
-        <Link to={'/create'}>Create new post</Link>
+        <Link className="text-white font-blod" to={'/create'} >Create new post</Link>
       
-        {/* <Link to={'/login'}> */}
+      <div className="bg-black text-white font-bold h-8 flex justify-center items-center px-2 rounded-md cursor-pointer">
+
           <a onClick={logOut}>Logout</a>
-        {/* </Link> */}
+      </div>
+        
         </>
         
       )} 

@@ -76,11 +76,25 @@ export const Header = () => {
       <div className="absolute ml-[650px] mt-[100px]">
         <div className="font-medium tracking-wider">Discover stories, thinking, and expertise </div>
         <div className="font-medium tracking-wider">from writers on any topic</div>
-        <div className="mt-4">
-          <Link to='/register'>
-          <button className="bg-black text-white px-4 py-2 rounded-md tracking-wider">Start Writing</button>
+      {!user_name && (
+          <Link to={'/register'}>
+          <div className="mt-4">
+          
+            <button className="bg-black text-white px-4 py-2 rounded-md tracking-wider">Start Writing</button>
+            
+          </div>
           </Link>
-        </div>
+      )}
+        {user_name && (
+            <Link to={'/create'}>
+            <div className="mt-4">
+            
+              <button className="bg-black text-white px-4 py-2 rounded-md tracking-wider">Start Writing</button>
+              
+            </div>
+            </Link>
+        )}
+      
       </div>
 
     <nav className='flex gap-[15px]'>
@@ -88,6 +102,7 @@ export const Header = () => {
       {user_name && (
         <>
         <Link to={'/create'}>Create new post</Link>
+      
         {/* <Link to={'/login'}> */}
           <a onClick={logOut}>Logout</a>
         {/* </Link> */}

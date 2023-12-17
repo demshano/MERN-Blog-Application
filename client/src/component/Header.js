@@ -55,27 +55,30 @@ export const Header = () => {
 
   return (
 
-    <main className='p-[10px] w-full h-[300px] mx-auto bg-sky-300'>
-        <header className='flex justify-between mb-[50px] mt-[20px]'>
+    <main className='p-[10px]  h-[300px] mx-auto bg-sky-300 '>
+      
+        <header className='flex justify-between mb-[50px] mt-[20px] overflow-hidden'>
 
       <div>
 
 
-            <Link to="/" className='logo no-underline font-bold text-lg ml-44'>
-              <span className="text-5xl">Quantum</span>
-              <span className="text-white ml-2">Pulse</span>
+            <Link to="/" className='logo no-underline font-bold  md:ml-36 lg:ml-44'>
+              <span className=" md:text-5xl text-3xl">Quantum</span>
+              <span className="text-white md:text-lg text-sm ml-2">Pulse</span>
             </Link>
 
-          <div className="ml-44 mt-20 md:block sm:hidden">
-            <span className="text-8xl font-extrabold italic">Stay</span>
-            <span className="italic text-5xl font-medium" ref={el} />
+          <div className="ml-44 mt-20 hidden md:block lg:block ">
+            <span className="lg:text-8xl md:text-6xl font-extrabold italic">Stay</span>
+            <span className="italic lg:text-5xl md:text-3xl font-medium" ref={el} />
           </div>
 
       </div>
 
-      <div className="absolute ml-[650px] mt-[100px]">
-        <div className="font-medium tracking-wider">Discover stories, thinking, and expertise </div>
-        <div className="font-medium tracking-wider">from writers on any topic</div>
+      <div className="absolute  lg:ml-[650px] mt-[100px]  md:ml-[480px] sm:ml-[200px] ml-[100px]">
+        {/* md:ml-[480px] sm:ml-[200px] ml-[100px]  */}
+        <div className="font-medium tracking-wider lg:text-lg md:text-base sm:text-sm text-sm ">Discover stories, thinking, and expertise </div>
+        <div className="font-medium tracking-wider lg:text-lg md:text-base sm:text-sm text-sm ">from writers on any topic</div>
+        {/* lg:text-lg md:text-base sm:text-sm text-sm  */}
       {!user_name && (
           <Link to={'/register'}>
           <div className="mt-4">
@@ -97,11 +100,15 @@ export const Header = () => {
       
       </div>
 
-    <nav className='flex gap-[15px]'>
+    <nav className='flex gap-[15px] '>
 
       {user_name && (
         <>
-        <Link className="text-white font-blod" to={'/create'} >Create new post</Link>
+        <Link className="text-white font-bold " to={'/create'} >
+            <span className="hidden sm:inline">Create new post</span>
+            <span className="sm:hidden">Create</span>
+          </Link>
+      
       
       <div className="bg-black text-white font-bold h-8 flex justify-center items-center px-2 rounded-md cursor-pointer">
 
@@ -112,7 +119,7 @@ export const Header = () => {
         
       )} 
       {!user_name && (
-        <div className="mr-44">
+        <div className="mr-44 ">
         <Link className="font-medium mr-8" to="/login">Sign in</Link>
         <Link className="bg-black text-white p-2 rounded-md" to="/register">Get Started</Link>
         </div>
@@ -123,6 +130,7 @@ export const Header = () => {
 
         </header>
     </main>
+  
 
   )
 }

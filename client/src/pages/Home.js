@@ -15,7 +15,7 @@ export const Home = () => {
   },[])
 
   return (
-    <div className='p-[10px] max-w-[900px] mx-auto mt-8 rounded-md bg-slate-100 mb-10'>
+    <div className='px-[100px] py-[50px] max-w-[900px] mx-auto mt-8 rounded-md bg-sky-200 mb-10'>
 
         {posts.length > 0 && posts.map(post=>(
           

@@ -24,6 +24,7 @@ const secret= 'dsgsrgthrtbh';
 // mongodb+srv://delabro99:<password>@cluster0.t1lmi0o.mongodb.net/?retryWrites=true&w=majority
 // mongodb+srv://delabro99:sYdFZFTqsZwdsc9u@cluster0.t1lmi0o.mongodb.net/?retryWrites=true&w=majority
 // mongodb+srv://delabro99:sYdFZFTqsZwdsc9u@cluster0.t1lmi0o.mongodb.net/?retryWrites=true&w=majority
+// mongodb+srv://delabro99:sYdFZFTqsZwdsc9u@cluster0.t1lmi0o.mongodb.net/?retryWrites=true&w=majority
     app.post('/register', async (req,res)=>{
         const {userName, password} = req.body;
 

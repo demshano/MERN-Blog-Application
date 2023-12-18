@@ -67,14 +67,14 @@ export const Header = () => {
               <span className="text-white md:text-lg text-sm ml-2">Pulse</span>
             </Link>
 
-          <div className="ml-44 mt-20 hidden md:block lg:block ">
+          <div className="ml-44 mt-10 p-4 hidden md:block lg:block">
             <span className="lg:text-8xl md:text-6xl font-extrabold italic">Stay</span>
             <span className="italic lg:text-5xl md:text-3xl font-medium" ref={el} />
           </div>
 
       </div>
 
-      <div className="absolute  lg:ml-[650px] mt-[100px]  md:ml-[480px] sm:ml-[200px] ml-[100px]">
+      <div className="absolute xl:ml-[800px]  lg:ml-[700px] mt-[100px]  md:ml-[480px] sm:ml-[200px] ml-[100px]">
         {/* md:ml-[480px] sm:ml-[200px] ml-[100px]  */}
         <div className="font-medium tracking-wider lg:text-lg md:text-base sm:text-sm text-sm ">Discover stories, thinking, and expertise </div>
         <div className="font-medium tracking-wider lg:text-lg md:text-base sm:text-sm text-sm ">from writers on any topic</div>
@@ -119,9 +119,9 @@ export const Header = () => {
         
       )} 
       {!user_name && (
-        <div className="mr-44 ">
+        <div className="mr-44 mt-4">
         <Link className="font-medium mr-8" to="/login">Sign in</Link>
-        <Link className="bg-black text-white p-2 rounded-md" to="/register">Get Started</Link>
+        <Link className="bg-black text-white p-2 rounded-md " to="/register">Get Started</Link>
         </div>
       )}
 

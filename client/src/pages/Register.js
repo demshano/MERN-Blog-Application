@@ -41,11 +41,11 @@ export const Register = () => {
 
   <div className="flex-1 p-8">
     
-        <form onSubmit={register} action="" className='bg-sky-400 max-w-[400px]  mt-[150px] p-12 ml-28 rounded-md'>
+        <form onSubmit={register} action="" className='bg-sky-400 sm:max-w-[400px] max-w-[300px]  mt-[150px] p-12 ml-28 rounded-md'>
 
         <h1 className="">
-          <span className='text-2xl font-medium'>Join</span>
-          <span className='text-5xl font-bold ml-4'>Quantum</span>
+          <span className='sm:text-2xl font-medium text-lg'>Join</span>
+          <span className='sm:text-5xl text-2xl font-bold ml-4'>Quantum</span>
           <span className='text-white font-bold'>pulse</span>
         </h1>
 
@@ -90,7 +90,7 @@ export const Register = () => {
   
 
 
-<div className="flex-1 relative overflow-hidden">
+<div className="flex-1 relative overflow-hidden hidden lg:block">
   <div className="absolute top-0 right-0 w-full h-full bg-sky-300 rounded-tl-full rounded-bl-full"></div>
   {/* Your content for the curved-box goes here */}
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">

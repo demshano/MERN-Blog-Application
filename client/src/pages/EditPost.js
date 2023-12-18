@@ -72,39 +72,7 @@ export const EditPost = () => {
   }
 
   return (
-    // <form onSubmit={updatePost}>
-    //   <input
-    //     type="title"
-    //     placeholder="Title"
-    //     value={title}
-    //     onChange={(ev) => setTitle(ev.target.value)}
-    //   />
-    //   <input
-    //     type="summary"
-    //     placeholder="Summary"
-    //     value={summary}
-    //     onChange={(ev) => setSummary(ev.target.value)}
-    //   />
-    //   <input
-    //     type="file"
-    //     //value={files}
-    //     onChange={(ev) => setFiles(ev.target.files)}
-    //   />
-
     
-
-    //   <ReactQuill 
-    //     value={content} 
-    //     theme={'snow'}
-    //     onChange={newValue => setContent(newValue)} 
-    //     modules={modules} 
-        
-    //     />
-
-
-
-    //   <button>Update Post</button>
-    // </form>
 
     
 <div className="mt-24 my-4 border-4 border-sky-400 flex justify-center items-center mx-auto w-[600px]">

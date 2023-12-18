@@ -67,7 +67,8 @@ export const Login = () => {
 
     <div className="flex">
   {/* Left side with blue background */}
-  <div className="flex-shrink-0 w-1/2 h-screen bg-sky-300 rounded-r-full flex flex-col justify-center items-center">
+
+  <div className="flex-shrink-0 hidden   w-1/2 h-screen bg-sky-300 rounded-r-full md:flex flex-col justify-center items-center">
   <div className="flex">
     <span className="mr-2 text-black text-6xl font-bold ">Quantum</span>
     <span className='text-white ml-2 mt-6 text-2xl'>Pulse</span>
@@ -78,7 +79,7 @@ export const Login = () => {
 
 
   {/* Right side with login form */}
-  <div className="flex-1 flex items-center justify-center">
+  <div className="flex-1 flex items-center justify-center md:mt-0 mt-32">
     <div className="max-w-[400px] p-12 bg-white rounded">
       <h1 className="text-3xl font-bold text-center mb-8">Welcome Back</h1>
 
@@ -118,6 +119,8 @@ export const Login = () => {
 
     </div>
   </div>
+
+
 </div>
 
 

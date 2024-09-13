@@ -20,7 +20,7 @@ export const PostCard = ({_id, title, summary, content, cover,createdAt, author}
                 
       </div>
 
-          <div className='texts  col-span-1 md:mt-32 text-center'>
+          <div className='texts  col-span-1 md:mt-32 text-center px-4'>
 
                 <Link to={`/post/${_id}`}>
                     <h2 className='m-0 text-2xl font-bold'>{title}</h2>
@@ -36,7 +36,7 @@ export const PostCard = ({_id, title, summary, content, cover,createdAt, author}
                     {summary}
                 </p>
 
-      </div>
+          </div>
         
 
     

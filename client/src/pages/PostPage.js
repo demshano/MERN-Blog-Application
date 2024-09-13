@@ -61,15 +61,17 @@ export const PostPage = () => {
       <div className="xl:w-[1200px] lg:w-[1000px] md:w-[600px] sm:w-[400px] w-[300px] text-left mx-auto  bg-sky-200 p-16 rounded-lg flex flex-col" dangerouslySetInnerHTML={{__html:postInfo.content}} />
 
       <div className="py-4">
-      <div className="bg-sky-500 text-white py-2 px-4  rounded font-semibold w-fit flex justify-center items-center mx-auto">
+
+      <div className="">
           {userInfo.id === postInfo.author._id && (
-            <div>
+            <div className="bg-sky-500 text-white py-2 px-4  rounded font-semibold w-fit flex justify-center items-center mx-auto">
               <Link to={`/edit/${postInfo._id}`}>
                 Edit this post
                 </Link>
             </div>
           )}
       </div>
+
       </div>
 
 
